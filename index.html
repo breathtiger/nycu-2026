@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="交大咖啡館｜在校園裡，留一處深呼吸的餘裕。">
+  <title>交大咖啡館 NCTU Cafe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <style>
+    :root{--brown:#412417;--deep:#2b180f;--caramel:#8a5430;--cream:#f8f0e5;--paper:#fffaf3;--olive:#79845d;--line:rgba(65,36,23,.24)}
+    html{scroll-behavior:smooth}body{overflow-x:hidden;color:var(--deep);background:var(--paper);font-family:"Noto Serif TC","Songti TC","PMingLiU",Georgia,serif;letter-spacing:.04em}a{color:inherit}img{max-width:100%;display:block}
+    .navbar{min-height:74px;background:rgba(255,250,243,.96);box-shadow:0 1px 0 rgba(65,36,23,.08);backdrop-filter:blur(12px)}.navbar-brand{line-height:1;color:var(--deep)}.brand-zh{display:block;font-size:1.55rem;font-weight:700;letter-spacing:.12em}.brand-en{display:block;margin-top:.35rem;font: .76rem/1 Georgia,serif;letter-spacing:.12em}.nav-link{color:var(--deep);font-weight:700}
+    .hero{position:relative;min-height:520px;display:flex;align-items:center;color:#fff;background:url("assets/hero-coffee.png") center/cover no-repeat;isolation:isolate}.hero:before{position:absolute;inset:0;z-index:-1;content:"";background:linear-gradient(90deg,rgba(23,18,11,.68),rgba(23,18,11,.22) 53%,transparent 75%)}.hero-content{max-width:650px;padding-block:5rem}.hero h1{font-size:clamp(2.2rem,3.8vw,3.2rem);font-weight:600;letter-spacing:.1em;white-space:nowrap}.hero-rule{width:54px;height:2px;margin:1.5rem 0;background:#fff}.hero p{font-size:1.12rem;line-height:1.9;text-shadow:0 1px 7px #0008}
+    .btn-cafe{--bs-btn-color:#fff;--bs-btn-bg:var(--caramel);--bs-btn-border-color:var(--caramel);--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#704022;--bs-btn-hover-border-color:#704022;border-radius:.7rem;padding:.7rem 2rem;font-weight:700;letter-spacing:.1em}.btn-outline-light.btn-cafe{--bs-btn-bg:#44231470;--bs-btn-border-color:#fff;--bs-btn-hover-bg:#fff;--bs-btn-hover-color:var(--deep)}
+    .section-pad{padding-block:5.5rem}.story{background:linear-gradient(115deg,#f8f0e5,#fffaf4 70%)}.story-photo{width:100%;min-height:340px;border-radius:1.15rem;object-fit:cover}.eyebrow{color:#756b42;font-size:.9rem;font-weight:700;letter-spacing:.16em}.story h2,.section-heading{font-size:clamp(1.85rem,3vw,2.65rem);font-weight:700;line-height:1.35;letter-spacing:.08em}.story-copy{font-size:1.04rem;line-height:1.95}.mood-list{border-left:1px solid var(--line)}.mood-item{padding:0 0 1rem 1.8rem}.mood-item+.mood-item{padding-top:1rem;border-top:1px solid var(--line)}.mood-item strong{display:block;margin-bottom:.2rem;font-size:1.08rem}.mood-item small{line-height:1.7}
+    .title-ornament{display:flex;align-items:center;justify-content:center;gap:1.4rem}.title-ornament:before,.title-ornament:after{width:76px;height:1px;content:"";background:var(--brown);opacity:.65}.product-card{height:100%;overflow:hidden;border:0;border-radius:1rem;background:#f5ecdf;box-shadow:0 10px 35px #3d25160f;transition:.25s}.product-card:hover{transform:translateY(-7px);box-shadow:0 16px 38px #3d251624}.product-photo{height:230px;background:url("assets/products.png") no-repeat;background-size:300% 100%}.product-coffee{background-position:left}.product-croissant{background-position:center}.product-gift{background-position:right}.product-card .card-title{font-size:1.35rem;font-weight:700}
+    .features{padding-bottom:5.5rem}.feature{padding:1rem 2rem}.feature+.feature{border-left:1px solid var(--line)}.feature h3{font-size:1.25rem;font-weight:700}.feature p{margin:0;line-height:1.7}
+    .membership{overflow:hidden;color:#fff;background:linear-gradient(100deg,#3d472acc,#6f7c4fe8),url("assets/hero-coffee.png") center 64%/cover}.phone-wrap{min-height:430px;position:relative}.phone{position:absolute;right:13%;bottom:-82px;width:235px;height:465px;padding:12px;color:var(--deep);border:7px solid #1e1e1d;border-radius:38px;background:#151514;box-shadow:0 20px 55px #0006;transform:rotate(-8deg)}.phone:before{position:absolute;top:8px;left:50%;width:76px;height:20px;content:"";border-radius:15px;background:#151514;transform:translateX(-50%)}.phone-screen{height:100%;overflow:hidden;border-radius:25px;background:#f7efe1}.phone-hero{height:122px;padding:34px 18px 12px;color:#fff;text-align:center;background:linear-gradient(#321e1144,#321e1177),url("assets/hero-coffee.png") 70% center/cover}.points{margin:-16px 13px 13px;padding:12px 10px;border-radius:12px;background:#fff2d7;box-shadow:0 4px 12px #3c261f1f}.points span{display:block;font-size:.64rem}.points b{font-size:1.35rem}.phone-action{display:flex;align-items:center;gap:8px;margin:8px 13px;padding:11px;border-radius:9px;background:#ffffffc0;font-size:.68rem;font-weight:700}.phone-icon{width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:#ead7b7}.membership-copy{padding-block:4.5rem}.membership-copy h2{font-size:clamp(2rem,3.6vw,3.15rem);font-weight:600;letter-spacing:.1em}.coupon{max-width:360px;margin-block:1.5rem;padding:1.1rem;color:var(--deep);text-align:center;border-radius:.6rem;background:#f7e5c8;box-shadow:inset 14px 0 0 -8px #87926b,inset -14px 0 0 -8px #87926b}.coupon small{display:block;font-weight:700}.coupon strong{font-size:2rem}.coupon b{color:#9c4f1f;font-size:3.2rem;line-height:1}.benefits{margin-block:4.5rem;padding-left:2.5rem;border-left:1px solid #ffffff88}.benefit{display:flex;gap:1rem;align-items:center;margin-block:1.5rem}.benefit-icon{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;color:var(--brown);border-radius:50%;background:var(--cream);font:700 1.35rem Arial}.benefit p{margin:0;line-height:1.6}
+    .order{background:#fffaf4}.order-photo{width:100%;height:310px;border-radius:1rem;object-fit:cover}.order h2{font-size:2rem;font-weight:700}.form-control{padding:.72rem 1rem;border-color:#bca990;background:#ffffffb3}.form-control:focus{border-color:var(--caramel);box-shadow:0 0 0 .2rem #8b542f26}.contact-meta{height:100%;padding-left:2rem;border-left:1px solid var(--line)}.meta-row{display:flex;gap:.8rem;margin-bottom:1.8rem;line-height:1.7}.meta-icon{width:24px;flex:0 0 24px;color:var(--caramel);font-family:Arial;font-weight:700}
+    footer{padding-block:1.4rem;color:#fff;background:var(--deep)}footer a{color:#fff;text-decoration:none;opacity:.85}footer a:hover{color:#fff;opacity:1}
+    @media(max-width:991.98px){.navbar-collapse{padding-block:1rem}.hero{min-height:600px;background-position:60%}.mood-list{margin-top:1.5rem;border-left:0}.mood-item{padding-left:0}.feature+.feature{border-left:0;border-top:1px solid var(--line)}.phone-wrap{min-height:520px}.phone{right:50%;bottom:20px;transform:translateX(50%) rotate(-6deg)}.benefits{margin-top:0;margin-bottom:4rem;padding-left:0;border:0}.contact-meta{margin-top:2rem;padding:2rem 0 0;border-top:1px solid var(--line);border-left:0}}
+    @media(max-width:767.98px){.navbar{min-height:66px}.brand-zh{font-size:1.25rem}.brand-en{font-size:.66rem}.hero{min-height:570px;background-position:64%}.hero:before{background:#1c140d88}.hero-content{padding-block:4rem;text-align:center}.hero h1{white-space:normal}.hero-rule{margin-inline:auto}.hero p{font-size:1rem}.hero-actions{justify-content:center}.section-pad{padding-block:4rem}.story-photo{min-height:260px}.title-ornament{gap:.8rem}.title-ornament:before,.title-ornament:after{width:32px}.product-photo{height:210px}.membership-copy{padding-top:0;text-align:center}.coupon{margin-inline:auto}.order-photo{height:240px}footer{text-align:center}}
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="主要導覽">
+    <div class="container">
+      <a class="navbar-brand" href="#top"><span class="brand-zh">交大咖啡館</span><span class="brand-en">NCTU Cafe</span></a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="開啟導覽選單"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-lg-4 text-center">
+          <li class="nav-item"><a class="nav-link" href="#about">關於我們</a></li><li class="nav-item"><a class="nav-link" href="#products">人氣商品</a></li><li class="nav-item"><a class="nav-link" href="#member">會員優惠</a></li><li class="nav-item"><a class="nav-link" href="#order">會議訂餐</a></li><li class="nav-item"><a class="nav-link" href="#contact">聯絡資訊</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="top">
+    <header class="hero"><div class="container"><div class="hero-content">
+      <h1>留一處深呼吸的餘裕</h1><div class="hero-rule"></div>
+      <p>在交大的日常裡，<br>用一杯好咖啡，為學習、討論與創意，<br class="d-none d-md-block">留一段更從容的時光。</p>
+      <div class="hero-actions d-flex flex-wrap gap-3 mt-4"><a class="btn btn-outline-light btn-cafe" href="#order">線上點餐 ›</a><a class="btn btn-outline-light btn-cafe" href="#member">加入 LINE ›</a></div>
+    </div></div></header>
+
+    <section class="story section-pad" id="about"><div class="container"><div class="row align-items-center g-4 g-xl-5">
+      <div class="col-lg-5"><img class="story-photo" src="assets/cafe-story.png" alt="陽光灑落的咖啡館窗邊，桌上擺著咖啡、書本與花瓶"></div>
+      <div class="col-lg-4"><p class="eyebrow mb-2">品牌故事</p><h2>不只是一杯咖啡，<br>而是交大生活的一部分</h2><p class="story-copy mt-4 mb-0">交大咖啡館，從校園出發，<br>以一杯真誠的咖啡、剛出爐的點心，<br>陪伴每個專注、交流與放鬆的片刻。</p></div>
+      <div class="col-lg-3"><div class="mood-list"><div class="mood-item"><strong>專注的早晨</strong><small>一杯手沖，開啟高效的一天。</small></div><div class="mood-item"><strong>熱絡的討論</strong><small>一份甜點，讓好點子更靠近。</small></div><div class="mood-item"><strong>放鬆的午後</strong><small>香氣與陽光，給自己一點喘息。</small></div></div></div>
+    </div></div></section>
+
+    <section class="section-pad" id="products"><div class="container">
+      <div class="text-center mb-5"><p class="eyebrow title-ornament mb-2">人氣推薦</p><h2 class="section-heading mb-2">精選好咖啡 × 每日現烤點心</h2><p>從產地咖啡到手作甜點，為你準備剛剛好的美味。</p></div>
+      <div class="row g-4">
+        <div class="col-md-4"><article class="card product-card"><div class="product-photo product-coffee" role="img" aria-label="玻璃手沖壺與現沖咖啡"></div><div class="card-body px-4 pb-4"><h3 class="card-title">單品手沖咖啡</h3><p>嚴選產地、風味純粹。</p><a class="btn btn-cafe py-2 px-4" href="#order">立即選購 ›</a></div></article></div>
+        <div class="col-md-4"><article class="card product-card"><div class="product-photo product-croissant" role="img" aria-label="金黃色現烤可頌"></div><div class="card-body px-4 pb-4"><h3 class="card-title">每日現烤點心</h3><p>新鮮出爐，香氣迷人。</p><a class="btn btn-cafe py-2 px-4" href="#order">立即選購 ›</a></div></article></div>
+        <div class="col-md-4"><article class="card product-card"><div class="product-photo product-gift" role="img" aria-label="緞帶咖啡禮盒與濾掛咖啡包"></div><div class="card-body px-4 pb-4"><h3 class="card-title">濾掛咖啡禮盒</h3><p>經典風味，送禮自用皆宜。</p><a class="btn btn-cafe py-2 px-4" href="#order">立即選購 ›</a></div></article></div>
+      </div>
+    </div></section>
+
+    <section class="features"><div class="container"><h2 class="section-heading title-ornament text-center mb-4">為何選擇交大咖啡館</h2><div class="row g-0 text-center">
+      <div class="col-lg-3 feature"><h3>嚴選好豆</h3><p>精選世界產區咖啡豆，<br>烘出乾淨而有層次的風味。</p></div><div class="col-lg-3 feature"><h3>每日現做</h3><p>甜點與輕食新鮮製作，<br>用簡單的好味道補充能量。</p></div><div class="col-lg-3 feature"><h3>貼近校園</h3><p>就在校園裡，<br>學習、討論、休息都方便。</p></div><div class="col-lg-3 feature"><h3>支持永續</h3><p>選用負責與環境友善的原料，<br>讓一杯咖啡也更有意義。</p></div>
+    </div></div></section>
+
+    <section class="membership" id="member"><div class="container"><div class="row align-items-center">
+      <div class="col-lg-4"><div class="phone-wrap"><div class="phone"><div class="phone-screen"><div class="phone-hero"><strong>交大咖啡館</strong></div><div class="points"><span>您好！交大會員</span><b>250</b> <small>點</small></div><div class="phone-action"><span class="phone-icon">☕</span>線上點餐<small class="ms-auto">快速選購 ›</small></div><div class="phone-action"><span class="phone-icon">◇</span>我的優惠<small class="ms-auto">優惠 1 張 ›</small></div><div class="phone-action"><span class="phone-icon">◎</span>消費紀錄<small class="ms-auto">查看明細 ›</small></div></div></div></div></div>
+      <div class="col-lg-5"><div class="membership-copy"><p class="eyebrow text-white-50">—— 會員專屬優惠</p><h2>加入會員，享更多咖啡時光</h2><p class="lh-lg mt-3">線上點餐更方便，還有專屬折價與會員回饋。<br>讓日常的咖啡更划算、更輕鬆。</p><div class="coupon"><small>首購折價</small><strong>現折 <b>30</b> 元</strong></div><a class="btn btn-light btn-cafe" href="#order">立即加入會員 ›</a></div></div>
+      <div class="col-lg-3"><div class="benefits"><div class="benefit"><span class="benefit-icon">☕</span><p><strong>消費累點</strong><br>每 50 元累積 1 點。</p></div><div class="benefit"><span class="benefit-icon">%</span><p><strong>會員專屬優惠</strong><br>不定期享飲品、點心折扣。</p></div><div class="benefit"><span class="benefit-icon">☆</span><p><strong>新品優先通知</strong><br>搶先得知季節限定與新品。</p></div></div></div>
+    </div></div></section>
+
+    <section class="order section-pad" id="order"><div class="container"><div class="row align-items-center g-4 g-xl-5">
+      <div class="col-lg-4"><img class="order-photo" src="assets/cafe-story.png" alt="適合會議與討論的明亮咖啡館座位"></div>
+      <div class="col-lg-5"><h2>會議訂餐／校園外送</h2><p class="lh-lg">無論是課堂討論、社團活動或會議餐盒，<br>交大咖啡館都能為你準備咖啡、點心與輕食，並提供校園內外送服務。</p><form class="row g-2" action="#"><div class="col-sm-6"><label class="visually-hidden" for="name">聯絡人</label><input class="form-control" id="name" placeholder="聯絡人（姓名）" required></div><div class="col-sm-6"><label class="visually-hidden" for="request">需求</label><input class="form-control" id="request" placeholder="訂購需求（人數或簡述）" required></div><div class="col-12 d-grid"><button class="btn btn-cafe" type="submit">送出訂餐需求 ›</button></div></form></div>
+      <div class="col-lg-3" id="contact"><div class="contact-meta"><div class="meta-row"><span class="meta-icon">●</span><div><strong>店址</strong><br><small>新竹市大學路 1001 號<br>（交大校園內）</small></div></div><div class="meta-row"><span class="meta-icon">◷</span><div><strong>營業時間</strong><br><small>週一至週五　07:30–19:00<br>週六、週日　09:00–18:00</small></div></div></div></div>
+    </div></div></section>
+  </main>
+  <footer><div class="container"><div class="row align-items-center gy-3"><div class="col-lg-3"><span class="fs-5 fw-bold">交大咖啡館</span><small class="ms-2">NCTU Cafe</small></div><div class="col-lg-5"><nav class="d-flex flex-wrap justify-content-center gap-4"><a href="#about">關於我們</a><a href="#member">會員優惠</a><a href="#order">會議訂餐</a><a href="#contact">聯絡資訊</a></nav></div><div class="col-lg-4 text-lg-end"><small>© 2025 交大咖啡館 NCTU Cafe. All Rights Reserved.</small></div></div></div></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
