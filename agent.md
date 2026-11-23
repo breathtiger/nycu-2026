@@ -4,3 +4,4 @@
 專案網址：https://github.com/breathtiger/nycu-2026
 HPPTS：https://github.com/breathtiger/nycu-2026.git
 SSH：git@github.com:breathtiger/nycu-2026.git
+對外網址：https://breathtiger.github.io/nycu-2026/
